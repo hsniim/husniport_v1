@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 export default function Projects() {
   const projects = [
     {
-      image: 'https://brittanychiang.com/images/spotify-course.png',
-      title: 'Build a Spotify Connected App',
-      description: 'Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.',
-      tags: ['React', 'Express', 'Spotify API', 'Heroku'],
-      link: 'https://www.newline.co/courses/build-a-spotify-connected-app'
+      image: '/ss_racsihome.png',
+      title: 'RACSI (Room and Control Schedule Interface)',
+      description: 'RACSI adalah solusi aplikasi web andal yang dikembangkan khusus untuk mengoptimalkan pengelolaan ruangan dan jadwal di institusi pendidikan, kantor, atau gedung serbaguna, membantu Anda menghemat waktu berharga sekaligus menghindari konflik jadwal yang sering terjadi dengan teknologi  real-time.',
+      tags: ['HTML & CSS', 'JavaScript', 'Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
+      link: 'https://racsi-9dc.pages.dev/'
     },
     {
       image: 'https://brittanychiang.com/images/spotify-profile.png',
@@ -47,7 +47,7 @@ export default function Projects() {
         {/* Section Header (visible on mobile) */}
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-            Projects
+            Proyek
           </h2>
         </div>
 
