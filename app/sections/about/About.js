@@ -26,7 +26,8 @@ export default function About() {
             oleh pengguna.
             Sejak saat itu, saya fokus mengasah kemampuan di bidang web development, mulai dari 
             fondasi seperti <b>HTML</b>, <b>CSS</b>, dan <b>JavaScript</b>, hingga framework modern
-            seperti <b>Next.js</b>, <b>Node.js/Express</b>, serta <b>Laravel</b>. 
+            seperti <b>Next.js</b>, <b>Node.js/Express</b>, serta <b>Laravel</b>. Saya juga bisa 
+            membangun website menggunakan <b>WordPress</b> ketika dibutuhkan. 
             Sifat saya yang detail-oriented dan sedikit perfeksionis mendorong saya untuk
             selalu memastikan setiap elemen dalam proyek konsisten dan berfungsi dengan optimal.
           </p>
