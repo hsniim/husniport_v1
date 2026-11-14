@@ -11,7 +11,7 @@ export default function Experiences() {
       tags: []
     },
     {
-      period: 'Agust - Nov 2024',
+      period: 'Agust — Nov 2024',
       title: 'Back-end Developer',
       company: 'PT. Hexagon Karyatama Indonesia',
       description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more.',
