@@ -7,7 +7,6 @@ export default function Experiences() {
       period: 'Juli — Okt 2025',
       title: 'Full-stack Developer',
       company: 'SKSG - Universitas Indonesia',
-      link: 'https://klaviyo.com',
       description:'Bertanggung jawab mengembangkan website manajemen ruangan dan informasi real-time untuk lingkungan Kampus UI Salemba. Proyek bernama RACSI (Room and Control Schedule Interface) ini memungkinkan pengguna untuk memantau ketersediaan ruangan secara real-time, melakukan pemesanan ruang, serta mengakses informasi kampus terkini.',
       tags: ['JavaScript', 'React', , 'Node.js', 'Express.js']
     },
@@ -15,7 +14,6 @@ export default function Experiences() {
       period: 'Agust - Nov 2024',
       title: 'Back-end Developer',
       company: 'PT. Hexagon Karyatama Indonesia',
-      link: 'https://upstatement.com',
       description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more.',
       tags: ['JavaScript', 'TypeScript', 'HTML & SCSS', 'React', 'Next.js', 'React Native', 'WordPress', 'Contentful', 'Node.js', 'PHP']
     }
