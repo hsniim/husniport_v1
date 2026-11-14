@@ -18,14 +18,6 @@ export default function Experiences() {
       link: 'https://upstatement.com',
       description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more.',
       tags: ['JavaScript', 'TypeScript', 'HTML & SCSS', 'React', 'Next.js', 'React Native', 'WordPress', 'Contentful', 'Node.js', 'PHP']
-    },
-    {
-      period: 'July — Dec 2017',
-      title: 'UI Engineer Co-op',
-      company: 'Apple',
-      link: 'https://apple.com',
-      description: 'Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music\'s embeddable web player widget for in-browser user authorization and full song playback.',
-      tags: ['JavaScript', 'CSS', 'Ember.js', 'Ruby']
     }
   ]
 
