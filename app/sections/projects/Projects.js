@@ -5,7 +5,7 @@ export default function Projects() {
   const projects = [
     {
       image: '/ss_racsihome.png',
-      title: 'RACSI (Room and Control Schedule Interface)',
+      title: 'RACSI',
       description: 'RACSI adalah solusi aplikasi web andal yang dikembangkan khusus untuk mengoptimalkan pengelolaan ruangan dan jadwal di institusi pendidikan, kantor, atau gedung serbaguna, membantu Anda menghemat waktu berharga sekaligus menghindari konflik jadwal yang sering terjadi dengan teknologi  real-time.',
       tags: ['Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
       link: 'https://racsi-9dc.pages.dev/'
