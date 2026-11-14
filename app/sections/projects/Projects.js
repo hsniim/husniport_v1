@@ -7,16 +7,15 @@ export default function Projects() {
       image: '/ss_racsihome.png',
       title: 'RACSI (Room and Control Schedule Interface)',
       description: 'RACSI adalah solusi aplikasi web andal yang dikembangkan khusus untuk mengoptimalkan pengelolaan ruangan dan jadwal di institusi pendidikan, kantor, atau gedung serbaguna, membantu Anda menghemat waktu berharga sekaligus menghindari konflik jadwal yang sering terjadi dengan teknologi  real-time.',
-      tags: ['HTML & CSS', 'JavaScript', 'Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
+      tags: ['Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
       link: 'https://racsi-9dc.pages.dev/'
     },
     {
-      image: 'https://brittanychiang.com/images/spotify-profile.png',
-      title: 'Spotify Profile',
-      description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-      stars: 703,
-      tags: ['React', 'Express', 'Spotify API', 'Heroku'],
-      link: 'https://github.com/bchiang7/spotify-profile'
+      image: '/oltpay_preview.png',
+      title: 'Oltpay',
+      description: 'Oltpay adalah sebuah website layanan digital serba bisa yang dirancang untuk memudahkan kebutuhan sehari-hari. Lewat satu platform ini, pengguna bisa dengan mudah membeli pulsa, paket data internet, mengisi saldo dompet digital (seperti GoPay, OVO, DANA), membeli voucher game favorit, hingga membayar berbagai tagihan bulanan seperti listrik (PLN), air (PDAM), dan BPJS. Oltpay dibuat dengan tampilan yang ringan dan responsif, sehingga proses transaksi menjadi lebih cepat, praktis, dan nyaman digunakan siapa saja.',
+      tags: ['Astro', 'Typescript', 'Portalpulsa API'],
+      link: 'https://oltpay.pages.dev/'
     },
     {
       image: 'https://brittanychiang.com/images/halcyon.png',
