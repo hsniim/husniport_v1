@@ -1,19 +1,22 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Projects() {
+  const { t } = useLanguage()
+
   const projects = [
     {
       image: '/ss_racsihome.png',
       title: 'RACSI',
-      description: 'RACSI adalah solusi aplikasi web andal yang dikembangkan khusus untuk mengoptimalkan pengelolaan ruangan dan jadwal di institusi pendidikan, kantor, atau gedung serbaguna, membantu Anda menghemat waktu berharga sekaligus menghindari konflik jadwal yang sering terjadi dengan teknologi  real-time.',
+      description: t('projects.racsi'),
       tags: ['Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
       link: 'https://racsi-9dc.pages.dev/'
     },
     {
       image: '/oltpay_preview.png',
       title: 'Oltpay',
-      description: 'Oltpay adalah sebuah website layanan digital serba bisa yang dirancang untuk memudahkan kebutuhan sehari-hari. Lewat satu platform ini, pengguna bisa dengan mudah membeli pulsa, paket data internet, mengisi saldo dompet digital (seperti GoPay, OVO, DANA), membeli voucher game favorit, hingga membayar berbagai tagihan bulanan seperti listrik (PLN), air (PDAM), dan BPJS. Oltpay dibuat dengan tampilan yang ringan dan responsif, sehingga proses transaksi menjadi lebih cepat, praktis, dan nyaman digunakan siapa saja.',
+      description: t('projects.oltpay'),
       tags: ['Astro', 'Typescript', 'Portalpulsa API'],
       link: 'https://oltpay.pages.dev/'
     }
@@ -30,7 +33,7 @@ export default function Projects() {
         {/* Section Header (visible on mobile) */}
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-            Proyek
+            {t('nav.projects')}
           </h2>
         </div>
 

@@ -1,10 +1,14 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
+import { useLanguage } from '@/components/LanguageProvider'
+import LanguageToggle from '@/components/LanguageToggle'
 
 export default function Sidebar() {
   const [activeSection, setActiveSection] = useState('about')
+  const { t, lang } = useLanguage()
+  const hoveredSection = useRef(null) // id section yang sedang di-hover mouse
 
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]')
@@ -18,7 +22,6 @@ export default function Sidebar() {
       
       sections.forEach((section) => {
         const sectionTop = section.offsetTop
-        const sectionHeight = section.offsetHeight
         
         // Jika scroll position sudah melewati top section ini
         if (scrollPosition >= sectionTop - 100) {
@@ -49,6 +52,58 @@ export default function Sidebar() {
     return () => {
       window.removeEventListener('scroll', scrollListener)
     }
+  }, [lang])
+
+  // ===== Section focus: section yang tidak aktif diredupkan (desktop saja) =====
+  // Memakai activeSection yang sama dengan highlight menu, jadi keduanya selalu selaras.
+  // Section yang sedang di-hover mouse ikut menjadi terang walau bukan section aktif.
+  // Jika efek ini sudah ada di tempat lain (mis. page.js / globals.css), hapus salah satunya.
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const sections = Array.from(document.querySelectorAll('section[id]'))
+
+    const applyFocus = () => {
+      sections.forEach((section) => {
+        const focused =
+          section.id === activeSection || section.id === hoveredSection.current
+        section.style.transition = 'opacity 400ms ease'
+        section.style.opacity = mq.matches && !focused ? '0.5' : ''
+      })
+    }
+
+    const onEnter = (e) => {
+      hoveredSection.current = e.currentTarget.id
+      applyFocus()
+    }
+    const onLeave = () => {
+      hoveredSection.current = null
+      applyFocus()
+    }
+
+    sections.forEach((section) => {
+      section.addEventListener('mouseenter', onEnter)
+      section.addEventListener('mouseleave', onLeave)
+    })
+    mq.addEventListener('change', applyFocus)
+    applyFocus()
+
+    return () => {
+      sections.forEach((section) => {
+        section.removeEventListener('mouseenter', onEnter)
+        section.removeEventListener('mouseleave', onLeave)
+      })
+      mq.removeEventListener('change', applyFocus)
+    }
+  }, [activeSection, lang])
+
+  // Kembalikan style section saat Sidebar dilepas
+  useEffect(() => {
+    return () => {
+      document.querySelectorAll('section[id]').forEach((section) => {
+        section.style.opacity = ''
+        section.style.transition = ''
+      })
+    }
   }, [])
 
   const scrollToSection = (sectionId) => {
@@ -62,11 +117,12 @@ export default function Sidebar() {
     }
   }
 
+  // Label diambil dari locales (id.js / en.js). Tampil kapital lewat class "uppercase".
   const navItems = [
-    { id: 'about', label: 'TENTANG' },
-    { id: 'experiences', label: 'PENGALAMAN' },
-    { id: 'projects', label: 'PROYEK' },
-    { id: 'contact', label: 'KONTAK' }
+    { id: 'about', label: t('nav.about') },
+    { id: 'experiences', label: t('nav.experience') },
+    { id: 'projects', label: t('nav.projects') },
+    { id: 'contact', label: t('nav.contact') }
   ]
 
   return (
@@ -79,7 +135,7 @@ export default function Sidebar() {
               {/* Profile Image */}
               <Image
                 src="/square.png" 
-                alt="Husni Mubarok"
+                alt={t('hero.name')}
                 width={128}
                 height={128}
                 className="h-full w-full object-cover"
@@ -103,13 +159,13 @@ export default function Sidebar() {
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-          <a href="/">Husni Mubarok</a>
+          <a href="/">{t('hero.name')}</a>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          Full-stack Web Developer
+          {t('hero.role')}
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-slate-400">
-          Saya membuat aplikasi web yang stabil, scalable, dan user-friendly.
+          {t('hero.tagline')}
         </p>
 
         {/* Navigation */}
@@ -150,51 +206,59 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      {/* Social Links */}
-      <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
-        <li className="mr-5 text-xs">
-          <a
-            href="https://github.com/hsniim"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:text-slate-200"
-          >
-            <span className="sr-only">GitHub</span>
-            <Github className="h-6 w-6" aria-hidden="true" />
-          </a>
-        </li>
-        <li className="mr-5 text-xs">
-          <a
-            href="https://www.linkedin.com/in/sihusni/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:text-slate-200"
-          >
-            <span className="sr-only">LinkedIn</span>
-            <Linkedin className="h-6 w-6" aria-hidden="true" />
-          </a>
-        </li>
-        <li className="mr-5 text-xs">
-          <a
-            href="https://www.instagram.com/hsniim"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block hover:text-slate-200"
-          >
-            <span className="sr-only">Instagram</span>
-            <Instagram className="h-6 w-6" aria-hidden="true" />
-          </a>
-        </li>
-        <li className="mr-5 text-xs">
-          <a
-            href="mailto:husnovember21@gmail.com"
-            className="block hover:text-slate-200"
-          >
-            <span className="sr-only">Email</span>
-            <Mail className="h-6 w-6" aria-hidden="true" />
-          </a>
-        </li>
-      </ul>
+      {/* Social Links + Language toggle (versi desktop) */}
+      <div className="mt-8 flex flex-col items-start gap-5">
+        <ul className="ml-1 flex items-center" aria-label="Social media">
+          <li className="mr-5 text-xs">
+            <a
+              href="https://github.com/hsniim"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:text-slate-200"
+            >
+              <span className="sr-only">GitHub</span>
+              <Github className="h-6 w-6" aria-hidden="true" />
+            </a>
+          </li>
+          <li className="mr-5 text-xs">
+            <a
+              href="https://www.linkedin.com/in/sihusni/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:text-slate-200"
+            >
+              <span className="sr-only">LinkedIn</span>
+              <Linkedin className="h-6 w-6" aria-hidden="true" />
+            </a>
+          </li>
+          <li className="mr-5 text-xs">
+            <a
+              href="https://www.instagram.com/hsniim"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:text-slate-200"
+            >
+              <span className="sr-only">Instagram</span>
+              <Instagram className="h-6 w-6" aria-hidden="true" />
+            </a>
+          </li>
+          <li className="mr-5 text-xs">
+            <a
+              href="mailto:husnovember21@gmail.com"
+              className="block hover:text-slate-200"
+            >
+              <span className="sr-only">Email</span>
+              <Mail className="h-6 w-6" aria-hidden="true" />
+            </a>
+          </li>
+        </ul>
+
+        {/* Desktop: bola di bawah ikon sosial */}
+        <LanguageToggle className="ml-1 hidden lg:inline-flex" />
+      </div>
+
+      {/* Mobile: bola melayang di kanan bawah */}
+      <LanguageToggle floating className="lg:hidden" />
     </header>
   )
 }
