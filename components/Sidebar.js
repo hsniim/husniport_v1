@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
 import { useLanguage } from '@/components/LanguageProvider'
 import LanguageToggle from '@/components/LanguageToggle'
@@ -131,7 +132,7 @@ export default function Sidebar() {
         {/* Profile Photo */}
         <div className="mb-8 lg:mb-10">
           <div className="relative inline-block">
-            <div className="relative h-32 w-32 overflow-hidden rounded-2xl border-2 border-slate-200/10 bg-gradient-to-br from-teal-400/20 to-slate-800/40 shadow-lg transition-all hover:border-teal-300/30 hover:shadow-teal-500/20">
+            <div className="relative h-32 w-32 overflow-hidden rounded-2xl border-2 border-slate-200/10 bg-gradient-to-br from-teal-400/20 to-slate-800/40 shadow-lg transition-[border-color,box-shadow] hover:border-teal-300/30 hover:shadow-teal-500/20">
               {/* Profile Image */}
               <Image
                 src="/square.png" 
@@ -159,7 +160,7 @@ export default function Sidebar() {
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-          <a href="/">{t('hero.name')}</a>
+          <Link href="/">{t('hero.name')}</Link>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
           {t('hero.role')}
@@ -184,7 +185,7 @@ export default function Sidebar() {
                   }`}
                 >
                   <span
-                    className={`nav-indicator mr-4 h-px transition-all ${
+                    className={`nav-indicator mr-4 h-px transition-[width,background-color] ${
                       activeSection === item.id
                         ? 'w-16 bg-slate-200'
                         : 'w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200'
