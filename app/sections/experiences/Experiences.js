@@ -7,25 +7,15 @@ export default function Experiences() {
       period: 'Juli — Okt 2025',
       title: 'Full-stack Developer',
       company: 'SKSG - Universitas Indonesia',
-      link: 'https://klaviyo.com',
       description:'Bertanggung jawab mengembangkan website manajemen ruangan dan informasi real-time untuk lingkungan Kampus UI Salemba. Proyek bernama RACSI (Room and Control Schedule Interface) ini memungkinkan pengguna untuk memantau ketersediaan ruangan secara real-time, melakukan pemesanan ruang, serta mengakses informasi kampus terkini.',
-      tags: ['JavaScript', 'React', , 'Node.js', 'Express.js']
+      tags: []
     },
     {
-      period: 'Agust - Nov 2024',
-      title: 'Back-end Developer',
+      period: 'Agust — Nov 2024',
+      title: 'Front-end Developer',
       company: 'PT. Hexagon Karyatama Indonesia',
-      link: 'https://upstatement.com',
-      description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more.',
-      tags: ['JavaScript', 'TypeScript', 'HTML & SCSS', 'React', 'Next.js', 'React Native', 'WordPress', 'Contentful', 'Node.js', 'PHP']
-    },
-    {
-      period: 'July — Dec 2017',
-      title: 'UI Engineer Co-op',
-      company: 'Apple',
-      link: 'https://apple.com',
-      description: 'Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music\'s embeddable web player widget for in-browser user authorization and full song playback.',
-      tags: ['JavaScript', 'CSS', 'Ember.js', 'Ruby']
+      description: 'Berpartisipasi mengembangkan sistem manajemen keuangan untuk UMKM berbasis website dalam Program Teaching Factory di SMKN 46 Jakarta',
+      tags: []
     }
   ]
 
@@ -40,7 +30,7 @@ export default function Experiences() {
         {/* Section Header (visible on mobile) */}
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-            Experience
+            Pengalaman
           </h2>
         </div>
 
@@ -70,15 +60,6 @@ export default function Experiences() {
                             {exp.title} · {' '}
                             <span className="inline-block">
                               {exp.company}
-                              <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                viewBox="0 0 20 20" 
-                                fill="currentColor" 
-                                className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" 
-                                aria-hidden="true"
-                              >
-                                <path fillRule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clipRule="evenodd"></path>
-                              </svg>
                             </span>
                           </span>
                         </a>
@@ -101,28 +82,6 @@ export default function Experiences() {
               </li>
             ))}
           </ol>
-        </div>
-
-        <div className="mt-12">
-          <a 
-            href="/resume.pdf" 
-            className="inline-flex items-center font-medium leading-tight text-slate-200 group"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">
-              View Full Résumé
-            </span>
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 20 20" 
-              fill="currentColor" 
-              className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none" 
-              aria-hidden="true"
-            >
-              <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd"></path>
-            </svg>
-          </a>
         </div>
       </motion.div>
     </section>

@@ -13,7 +13,7 @@ export default function About() {
         {/* Section Header (visible on mobile) */}
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-            About
+            Tentang
           </h2>
         </div>
         
@@ -26,7 +26,8 @@ export default function About() {
             oleh pengguna.
             Sejak saat itu, saya fokus mengasah kemampuan di bidang web development, mulai dari 
             fondasi seperti <b>HTML</b>, <b>CSS</b>, dan <b>JavaScript</b>, hingga framework modern
-            seperti <b>Next.js</b>, <b>Node.js/Express</b>, serta <b>Laravel</b>. 
+            seperti <b>Next.js</b>, <b>Node.js/Express</b>, serta <b>Laravel</b>. Saya juga bisa 
+            membangun website menggunakan <b>WordPress</b> ketika dibutuhkan. 
             Sifat saya yang detail-oriented dan sedikit perfeksionis mendorong saya untuk
             selalu memastikan setiap elemen dalam proyek konsisten dan berfungsi dengan optimal.
           </p>

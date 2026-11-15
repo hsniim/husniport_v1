@@ -63,10 +63,10 @@ export default function Sidebar() {
   }
 
   const navItems = [
-    { id: 'about', label: 'ABOUT' },
-    { id: 'experiences', label: 'EXPERIENCE' },
-    { id: 'projects', label: 'PROJECTS' },
-    { id: 'contact', label: 'CONTACT' }
+    { id: 'about', label: 'TENTANG' },
+    { id: 'experiences', label: 'PENGALAMAN' },
+    { id: 'projects', label: 'PROYEK' },
+    { id: 'contact', label: 'KONTAK' }
   ]
 
   return (
@@ -154,7 +154,7 @@ export default function Sidebar() {
       <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
         <li className="mr-5 text-xs">
           <a
-            href="https://github.com"
+            href="https://github.com/hsniim"
             target="_blank"
             rel="noopener noreferrer"
             className="block hover:text-slate-200"
@@ -165,7 +165,7 @@ export default function Sidebar() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sihusni/"
             target="_blank"
             rel="noopener noreferrer"
             className="block hover:text-slate-200"
@@ -176,7 +176,7 @@ export default function Sidebar() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/hsniim"
             target="_blank"
             rel="noopener noreferrer"
             className="block hover:text-slate-200"
@@ -187,7 +187,7 @@ export default function Sidebar() {
         </li>
         <li className="mr-5 text-xs">
           <a
-            href="mailto:your@email.com"
+            href="mailto:husnovember21@gmail.com"
             className="block hover:text-slate-200"
           >
             <span className="sr-only">Email</span>
