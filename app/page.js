@@ -1,5 +1,6 @@
 'use client'
 import Sidebar from '../components/Sidebar'
+import SectionFocus from '../components/SectionFocus'
 import About from './sections/about/About'
 import Experience from './sections/experiences/Experiences'
 import Projects from './sections/projects/Projects'
@@ -58,6 +59,9 @@ export default function Home() {
           background: 'radial-gradient(600px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(20, 184, 166, 0.15), transparent 80%)'
         }}
       ></div>
+
+      {/* Menggelapkan section yang tidak fokus saat scroll */}
+      <SectionFocus />
 
       <div className="relative z-10 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div className="lg:flex lg:justify-between lg:gap-4">
