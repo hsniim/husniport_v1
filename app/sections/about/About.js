@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useLanguage, Rich } from '@/components/LanguageProvider'
 
 export default function About() {
@@ -7,7 +7,7 @@ export default function About() {
 
   return (
     <section id="about" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -27,7 +27,7 @@ export default function About() {
             </p>
           ))}
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, m, useReducedMotion } from "framer-motion";
 import { Globe } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -44,7 +44,7 @@ export default function LanguageToggle({ floating = false, className = "" }) {
 
       <span className="relative inline-block w-5 text-xs font-bold uppercase tracking-widest text-slate-200 transition-colors group-hover:text-teal-300 group-focus-visible:text-teal-300">
         <AnimatePresence mode="wait" initial={false}>
-          <motion.span
+          <m.span
             key={lang}
             className="block"
             initial={reduceMotion ? false : { opacity: 0, y: 4 }}
@@ -53,7 +53,7 @@ export default function LanguageToggle({ floating = false, className = "" }) {
             transition={{ duration: 0.15 }}
           >
             {lang}
-          </motion.span>
+          </m.span>
         </AnimatePresence>
       </span>
     </button>

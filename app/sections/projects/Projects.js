@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Projects() {
@@ -7,14 +7,16 @@ export default function Projects() {
 
   const projects = [
     {
-      image: '/ss_racsihome.png',
+      image: '/ss_racsihome',
+      imageHeight: 396,
       title: 'RACSI',
       description: t('projects.racsi'),
       tags: ['Tailwind CSS', 'React', 'Node.js', 'Express.js', 'Socket.IO'],
       link: 'https://racsi-9dc.pages.dev/'
     },
     {
-      image: '/oltpay_preview.png',
+      image: '/oltpay_preview',
+      imageHeight: 355,
       title: 'Oltpay',
       description: t('projects.oltpay'),
       tags: ['Astro', 'Typescript', 'Portalpulsa API'],
@@ -24,7 +26,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -41,17 +43,20 @@ export default function Projects() {
           <ul className="group/list">
             {projects.map((project, index) => (
               <li key={index} className="mb-12">
-                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                <div className="group relative grid gap-4 pb-1 transition-opacity sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                   <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                   
                   <div className="z-10 sm:col-span-2">
-                    <img 
-                      src={project.image} 
+                    <img
+                      src={`${project.image}-640.webp`}
+                      srcSet={`${project.image}-320.webp 320w, ${project.image}-640.webp 640w`}
+                      sizes="200px"
                       alt={project.title}
-                      className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:translate-y-1"
+                      className="w-[200px] max-w-full rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:translate-y-1"
                       loading="lazy"
-                      width="200"
-                      height="48"
+                      decoding="async"
+                      width="640"
+                      height={project.imageHeight}
                     />
                   </div>
 
@@ -122,7 +127,7 @@ export default function Projects() {
             ))}
           </ul>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }

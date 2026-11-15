@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useForm } from '@formspree/react'
 import { useState } from 'react'
 import { useLanguage } from '@/components/LanguageProvider'
@@ -11,7 +11,7 @@ export default function Contact() {
   
   return (
     <section id="contact" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 lg:min-h-[70vh] lg:flex lg:flex-col lg:justify-center">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -54,7 +54,7 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all hover:border-slate-600"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-[border-color,box-shadow] hover:border-slate-600"
                   placeholder={t('contact.form.namePlaceholder')}
                   disabled={state.submitting}
                 />
@@ -70,7 +70,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all hover:border-slate-600"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-[border-color,box-shadow] hover:border-slate-600"
                   placeholder={t('contact.form.emailPlaceholder')}
                   disabled={state.submitting}
                 />
@@ -86,7 +86,7 @@ export default function Contact() {
                   name="message"
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-all resize-none hover:border-slate-600"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-md text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-400 focus:ring-1 focus:ring-teal-400 transition-[border-color,box-shadow] resize-none hover:border-slate-600"
                   placeholder={t('contact.form.messagePlaceholder')}
                   disabled={state.submitting}
                 ></textarea>
@@ -103,14 +103,14 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="inline-block px-7 py-3.5 text-sm font-medium text-teal-300 border border-teal-300/80 rounded-md hover:bg-teal-300/10 hover:border-teal-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-block px-7 py-3.5 text-sm font-medium text-teal-300 border border-teal-300/80 rounded-md hover:bg-teal-300/10 hover:border-teal-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {state.submitting ? t('contact.form.sending') : t('contact.form.send')}
               </button>
             </form>
           )}
         </div>
-      </motion.div>
+      </m.div>
     </section>
   )
 }
