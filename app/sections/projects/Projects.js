@@ -16,22 +16,6 @@ export default function Projects() {
       description: 'Oltpay adalah sebuah website layanan digital serba bisa yang dirancang untuk memudahkan kebutuhan sehari-hari. Lewat satu platform ini, pengguna bisa dengan mudah membeli pulsa, paket data internet, mengisi saldo dompet digital (seperti GoPay, OVO, DANA), membeli voucher game favorit, hingga membayar berbagai tagihan bulanan seperti listrik (PLN), air (PDAM), dan BPJS. Oltpay dibuat dengan tampilan yang ringan dan responsif, sehingga proses transaksi menjadi lebih cepat, praktis, dan nyaman digunakan siapa saja.',
       tags: ['Astro', 'Typescript', 'Portalpulsa API'],
       link: 'https://oltpay.pages.dev/'
-    },
-    {
-      image: 'https://brittanychiang.com/images/halcyon.png',
-      title: 'Halcyon Theme',
-      description: 'Minimal dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-      installs: '100k+',
-      tags: ['VS Code', 'Sublime Text', 'Atom', 'iTerm2'],
-      link: 'https://github.com/bchiang7/halcyon-theme'
-    },
-    {
-      image: 'https://brittanychiang.com/images/v4.png',
-      title: 'brittanychiang.com (v4)',
-      description: 'An old portfolio site built with Gatsby with 6k+ stars and 3k+ forks on GitHub. Built with JavaScript and React.',
-      stars: 8141,
-      tags: ['Gatsby', 'Styled Components', 'Netlify'],
-      link: 'https://github.com/bchiang7/v4'
     }
   ]
 
