@@ -1,23 +1,18 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Experiences() {
-  const experiences = [
-    {
-      period: 'Juli — Okt 2025',
-      title: 'Full-stack Developer',
-      company: 'SKSG - Universitas Indonesia',
-      description:'Bertanggung jawab mengembangkan website manajemen ruangan dan informasi real-time untuk lingkungan Kampus UI Salemba. Proyek bernama RACSI (Room and Control Schedule Interface) ini memungkinkan pengguna untuk memantau ketersediaan ruangan secara real-time, melakukan pemesanan ruang, serta mengakses informasi kampus terkini.',
-      tags: []
-    },
-    {
-      period: 'Agust — Nov 2024',
-      title: 'Front-end Developer',
-      company: 'PT. Hexagon Karyatama Indonesia',
-      description: 'Berpartisipasi mengembangkan sistem manajemen keuangan untuk UMKM berbasis website dalam Program Teaching Factory di SMKN 46 Jakarta',
-      tags: []
-    }
-  ]
+  const { t } = useLanguage()
+
+  // Teks diambil dari locales; tags dibiarkan kosong seperti semula
+  const experiences = t('experience.items').map((item) => ({
+    period: item.period,
+    title: item.role,
+    company: item.company,
+    description: item.description,
+    tags: []
+  }))
 
   return (
     <section id="experiences" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
@@ -30,7 +25,7 @@ export default function Experiences() {
         {/* Section Header (visible on mobile) */}
         <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
-            Pengalaman
+            {t('nav.experience')}
           </h2>
         </div>
 
