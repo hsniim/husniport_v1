@@ -103,7 +103,7 @@ export default function Contact() {
                 disabled={state.submitting}
                 className="inline-block px-7 py-3.5 text-sm font-medium text-teal-300 border border-teal-300/80 rounded-md hover:bg-teal-300/10 hover:border-teal-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {state.submitting ? 'Mengirim...' : 'Send Message'}
+                {state.submitting ? 'Mengirim...' : 'Kirim Pesan'}
               </button>
             </form>
           )}
