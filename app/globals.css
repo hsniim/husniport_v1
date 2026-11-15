@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ---------- Section focus saat scroll ---------- */
+/* Section yang tidak sedang fokus digelapkan (diatur oleh components/SectionFocus.js) */
+main > section[id] {
+  transition: opacity 0.5s ease;
+}
+
+main[data-section-focus] > section[id]:not([data-active="true"]) {
+  opacity: 0.35; /* ubah angka ini untuk mengatur seberapa gelap */
+}
+
+/* Kalau mouse diarahkan ke section yang redup, section itu kembali terang.
+   Harus ditaruh setelah aturan di atas karena specificity-nya sama. */
+main[data-section-focus] > section[id]:hover {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section[id] {
+    transition: none;
+  }
+}
