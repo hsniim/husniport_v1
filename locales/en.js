@@ -13,7 +13,7 @@ const en = {
   },
   hero: {
     name: "Husni Mubarok",
-    role: "Full-stack Web Developer",
+    role: "Web Developer & IT Support",
     tagline: "I build web applications that are stable, scalable, and user-friendly.",
   },
   about: {
@@ -27,14 +27,14 @@ const en = {
     items: [
       {
         period: "Jul — Oct 2025",
-        role: "Full-stack Developer",
-        company: "SKSG - Universitas Indonesia",
+        role: "Full-stack Web Developer",
+        company: "SPPB - Universitas Indonesia",
         description:
           "Responsible for developing a real-time room and information management website for the UI Salemba Campus. The project, named RACSI (Room and Control Schedule Interface), lets users monitor room availability in real time, book rooms, and access the latest campus information.",
       },
       {
         period: "Aug — Nov 2024",
-        role: "Front-end Developer",
+        role: "Front-end Web Developer",
         company: "PT. Hexagon Karyatama Indonesia",
         description:
           "Took part in developing a web-based financial management system for MSMEs as part of the Teaching Factory Program at SMKN 46 Jakarta.",
